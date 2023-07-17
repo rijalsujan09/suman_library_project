@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Suman - Book Record</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--- Main Container --->
+    <div class="container">
+      <!-- table to show records -->
+      <h2>Book Record List:</h2>
+      <table id="record-table">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Edition</th>
+        </tr>
+      </table>
+      <br /><br />
+      <!-- Add Record Section -->
+
+      <div class="input-section">
+        <h2>Add Book Record:</h2>
+        <label for="id">Book ID:</label><br />
+        <input type="text" id="id" placeholder="   Enter ID" /><br />
+        <label for="name">Book Name:</label><br />
+        <input type="text" id="name" placeholder="   Enter Name" /><br />
+        <label for="author">Author:</label><br />
+        <input type="text" id="author" placeholder="  Enter Author" /><br />
+        <label for="edition">Edition:</label><br />
+        <input type="text" id="edition" placeholder="   Enter Edition" /><br />
+        <button
+          id="addbtn"
+          onclick="addRecord()"
+          style="background-color: green"
+        >
+          Add Record
+        </button>
+        <p id="asccmsg"  style="color: green; display: none;">  Record Added Sucessful !</p>
+      </div>
+      <p id="errmsg" style="color: red; display: none"></p>
+
+      <!-- Search section -->
+      <div class="search-section">
+        <h2>Search Book:</h2>
+        <label for="search">Search Book by Name:</label><br />
+        <input
+          type="text"
+          id="search"
+          placeholder="     Enter Name or Id"
+        /><br />
+        <button
+          id="srchbtn"
+          onclick="searchRecord()"
+          style="background-color: blue"
+        >
+          Search
+        </button>
+
+        <table id="search-table" style="display: none;"> </table>
+      </div>
+      <p id="errmsg2" style="color: red; display: none"></p>
+
+      <!-- update section -->
+      <div id="hiden" class="update-section" >
+        <h2>Update Book Record:</h2>
+        <label for="update-id">Update ID:</label><br />
+        <input type="text" id="update-id" placeholder="Enter ID" /><br />
+        <label for="update-name">Book Name:</label><br />
+        <input type="text" id="update-name" placeholder="Enter Name" /><br />
+        <label for="update-author">Author:</label><br />
+        <input
+          type="text"
+          id="update-author"
+          placeholder="Enter Author"
+        /><br />
+        <label for="update-edition">Edition:</label><br />
+        <input
+          type="text"
+          id="update-edition"
+          placeholder="Enter Edition"
+        /><br />
+        <button
+          id="updbtn"
+          onclick="updateRecord()"
+          style="background-color: orange"
+        >
+          Update Record
+        </button>
+        <p id="usccmsg"  style="color: green; display: none;"> Update Record Sucess !</p>
+      </div>
+      <p id="errmsg1" style="color: red; display: none"></p>
+      
+
+      <!-- Search section -->
+      <div class="delete-section">
+        <h2>Delete Book Record:</h2>
+        <label for="search">Enter Book Name you want to Delete:</label><br />
+        <input
+          type="text"
+          id="delete"
+          placeholder="     Enter  Book Name "
+        /><br />
+        <button
+          id="srchbtn"
+          onclick="deleteRecord()"
+          style="background-color: red"
+        >
+          Delete
+        </button>
+
+        <p id="dsccmsg"  style="color: green; display: none;"> Delete Record Sucess !</p>
+      </div>
+      <p id="errmsg3" style="color: red; display: none"></p>
+    </div>
+
+    <!-- script tag -->
+    <script src="./src/script.js"></script>
+  </body>
+</html>
